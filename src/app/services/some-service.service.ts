@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Item } from '../interfaces/item';
 
 @Injectable({
   providedIn: 'root'
@@ -19,6 +20,13 @@ export class SomeServiceService {
     console.log(
       `Data received: firstName: ${firstName}, lastName: ${lastName}, email: ${email}.`,
     );
+  }
+
+  
+  async getAllousingLocations(): Promise<Item[]> {
+    return fetch('http://localhost:3000/items')
+    .then((response) => response.json())
+    .then((response) => response[0])
   }
 
 }
