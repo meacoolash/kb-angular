@@ -2,5 +2,12 @@
     
 <div>This is my input prop: {{myInput}}</div>
 
-<div>And here will be some ngFor:</div>
-<div *ngFor="let item of items">{{item}}</div>
+<br>
+<br>
+
+<input type="text" placeholder="Filter by fruit" #filter (keyup)="filterItems(filter.value)">
+<div *ngFor="let item of filteredItems">{{item}}</div>
+
+<br>
+<br>
+

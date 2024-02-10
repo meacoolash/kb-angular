@@ -15,4 +15,10 @@ export class SomeServiceService {
     return this.myData;
   }
 
+  public submitApplication(firstName: string, lastName: string, email: string) {
+    console.log(
+      `Data received: firstName: ${firstName}, lastName: ${lastName}, email: ${email}.`,
+    );
+  }
+
 }
